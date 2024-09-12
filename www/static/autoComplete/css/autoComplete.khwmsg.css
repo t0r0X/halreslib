@@ -1,0 +1,129 @@
+.autoComplete_wrapper {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .autoComplete_wrapper > input {
+    height: 3rem;
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem 0 1rem;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 1rem;
+    text-overflow: ellipsis;
+    color: rgba(16, 159, 222, 0.3);
+    outline: none;
+    border-radius: 10rem;
+    border: 0.05rem solid rgba(16, 159, 222, 0.5);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' focusable='false' x='0px' y='0px' width='30' height='30' viewBox='0 0 171 171' style=' fill:%23000000;'%3E%3Cg fill='none' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal'%3E%3Cpath d='M0,171.99609v-171.99609h171.99609v171.99609z' fill='none'%3E%3C/path%3E%3Cg fill='%23109FDE'%3E%3Cpath d='M74.1,17.1c-31.41272,0 -57,25.58728 -57,57c0,31.41272 25.58728,57 57,57c13.6601,0 26.20509,-4.85078 36.03692,-12.90293l34.03301,34.03301c1.42965,1.48907 3.55262,2.08891 5.55014,1.56818c1.99752,-0.52073 3.55746,-2.08067 4.07819,-4.07819c0.52073,-1.99752 -0.0791,-4.12049 -1.56818,-5.55014l-34.03301,-34.03301c8.05215,-9.83182 12.90293,-22.37682 12.90293,-36.03692c0,-31.41272 -25.58728,-57 -57,-57zM74.1,28.5c25.2517,0 45.6,20.3483 45.6,45.6c0,25.2517 -20.3483,45.6 -45.6,45.6c-25.2517,0 -45.6,-20.3483 -45.6,-45.6c0,-25.2517 20.3483,-45.6 45.6,-45.6z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: 1.4rem;
+    background-position: left 1.05rem top 0.8rem;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-color: #fff;
+    transition: all 0.4s ease;
+    -webkit-transition: all -webkit-transform 0.4s ease;
+  }
+  
+  .autoComplete_wrapper > input::placeholder {
+    color: rgba(16, 159, 222, 0.5);
+    transition: all 0.3s ease;
+    -webkit-transition: all -webkit-transform 0.3s ease;
+  }
+  
+  .autoComplete_wrapper > input:hover::placeholder {
+    color: rgba(16, 159, 222, 0.6);
+    transition: all 0.3s ease;
+    -webkit-transition: all -webkit-transform 0.3s ease;
+  }
+  
+  .autoComplete_wrapper > input:focus::placeholder {
+    padding: 0.1rem 0.6rem;
+    font-size: 0.95rem;
+    color: rgba(16, 159, 222, 0.4);
+  }
+  
+  .autoComplete_wrapper > input:focus::selection {
+    background-color: rgba(255, 122, 122, 0.15);
+  }
+  
+  .autoComplete_wrapper > input::selection {
+    background-color: rgba(16, 159, 222, 0.15);
+  }
+  
+  .autoComplete_wrapper > input:hover {
+    color: rgba(16, 159, 222, 0.8);
+    transition: all 0.3s ease;
+    -webkit-transition: all -webkit-transform 0.3s ease;
+  }
+  
+  .autoComplete_wrapper > input:focus {
+    color: rgba(16, 159, 222, 1);
+    border: 0.06rem solid rgba(16, 159, 222, 0.8);
+  }
+  
+  .autoComplete_wrapper > ul {
+    position: absolute;
+    max-height: 375px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+    z-index: 1;
+    list-style: none;
+    border-radius: 0.6rem;
+    background-color: #fff;
+    border: 1px solid rgba(33, 33, 33, 0.07);
+    box-shadow: 0 3px 6px rgba(149, 157, 165, 0.15);
+    outline: none;
+    transition: opacity 0.15s ease-in-out;
+    -moz-transition: opacity 0.15s ease-in-out;
+    -webkit-transition: opacity 0.15s ease-in-out;
+  }
+  
+  .autoComplete_wrapper > ul[hidden],
+  .autoComplete_wrapper > ul:empty {
+    display: block;
+    opacity: 0;
+    transform: scale(0);
+  }
+  
+  .autoComplete_wrapper > ul > li {
+    margin: 0.3rem;
+    padding: 0.3rem 0.5rem;
+    text-align: left;
+    font-size: 1rem;
+    color: #212121;
+    border-radius: 0.35rem;
+    background-color: rgba(255, 255, 255, 1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.2s ease;
+  }
+  
+  .autoComplete_wrapper > ul > li mark {
+    background-color: transparent;
+    color: rgba(16, 159, 222, 1);
+    font-weight: bold;
+    padding: 0px !important;
+  }
+  
+  .autoComplete_wrapper > ul > li:hover {
+    cursor: pointer;
+    background-color: rgba(16, 159, 222, 0.15);
+  }
+  
+  .autoComplete_wrapper > ul > li[aria-selected="true"] {
+    background-color: rgba(16, 159, 222, 0.15);
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .autoComplete_wrapper > input {
+      width: 18rem;
+    }
+  }

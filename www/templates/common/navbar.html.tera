@@ -1,0 +1,29 @@
+<!-- NAVIGATION START -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary pt-log-3" data-bs-theme="dark">
+
+  <div class="container-fluid">
+    <div><h5 style="color:white;">Berlin Rust Hack&Learn Web Ressources</h5></div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav nav-underline ms-auto mb-2">
+
+        <li class="nav-item">
+          <a class="nav-link" id="nav-start" aria-current="page" href="/start">Start</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="nav-user" data-bs-toggle="dropdown" href="#" role="button"
+            aria-expanded="false">
+            <img src="/www/static/common/avatar.svg" alt="" width="24" height="24" class="d-inline-block align-text-top">
+            {{ user_uuid | safe }}
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://berline.rs/">Leave</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+</nav>
+<!-- NAVIGATION ENDE -->

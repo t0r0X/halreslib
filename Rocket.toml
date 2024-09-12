@@ -1,0 +1,49 @@
+
+[default]
+address = "127.0.0.1"
+#log_level = "normal"  :  automatic: debug = normal, release = critical
+limits = { form = "64 kB", json = "10 MiB" }
+template_dir = "www/templates/"
+
+# Development appendx
+[debug]
+log_level = "normal"
+port = 8010
+pudb_service = "http://localhost:8010"
+ident = "HaLRDB-Debug"
+secret_key = "AHd/xbZItk2185mcg6GeWT2KrsBrUw5LFb4zT14OFEk="
+
+# Development
+#[debug]
+#log_level = "normal"
+#port = 8010
+#pudb_service = "http://localhost:8010"
+#ident = "HaLRDB-Dev"
+#secret_key = "AHd/xbZItk2185mcg6GeWT2KrsBrUw5LFb4zT14OFEk="
+
+# Staging
+#[debug]
+#log_level = "normal"#port = 8020
+#pudb_service = "http://localhost:8020"
+#ident = "HaLRDB-Stage"
+#secret_key = "AHd/xbZItk2185mcg6GeWT2KrsBrUw5LFb4zT14OFEk="
+
+# Test
+#[debug]
+#port = 8030
+#pudb_service = "http://localhost:8030"
+#ident = "HaLRDB-Test"
+#secret_key = "AHd/xbZItk2185mcg6GeWT2KrsBrUw5LFb4zT14OFEk="
+
+[release]
+log_level = "critical"
+address = "127.0.0.1"
+port = 8000
+pudb_service = "http://localhost:8000"
+ident = "HaLRDB-Prod"
+secret_key = "AHd/xbZItk2185mcg6GeWT2KrsBrUw5LFb4zT14OFEk="
+
+
+
+[default.databases.halreslib_database]
+url = "halreslib.sqlite"

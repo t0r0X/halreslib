@@ -1,0 +1,105 @@
+<!-- SAMPLE SCHEMA FOR HTML TEMPLATES -->
+
+<!doctype html>
+<html lang="de">
+
+<head>
+  <title>PAGE TITLE</title>
+  <script type="module" src="/www/static/generic/generic.js"></script>
+  <!-- All stylesheet related stuff and common header elements are loaded from sub-template "header" -->
+  {% include "common/header" %}
+</head>
+
+<body>
+
+  <!-- The navbar is loaded from sub-template "navbar" (the active item is set later by the page-js) -->
+  {% include "common/navbar" %}
+
+  <!-- PAGE TITLE START -->
+  <div class="container mt-3 mb-3">
+    <img id="lead_img" class="rounden float-start" height="100px" src="/static/dashboard/dashboard-icon.svg" />
+    <div class="fs-2 mb-1 text-center"><b>MAJOR PAGE TOPIC</b><br>MINOR PAGE TOPIC</div>
+  </div>
+  <!-- PAGE TITLE END -->
+
+  <!-- QUERY ELEMENT START -->
+  <div id="tool-bar" class="container">
+    <hr>
+    <div class="row">
+      <div class="col-md-9 mt-1"></div>
+      <div class="col-md-3">
+        <button id="btn-new-object" class="btn btn-primary mt-1 float-end">Neuer Eintrag</button>
+      </div>
+    </div>
+    <hr>
+    <div id="NAME_table"></div>
+    <script>
+      var tabledata = {{ query_index | safe }};
+    </script>
+
+  </div>
+  <!-- QUERY ELEMENT  END -->
+
+
+  <!-- FORM START -->
+  <form id="form_NAME" class="form-floating mb-1 needs-validated" autocomplete="off" novalidate>
+
+
+    <!-- INTRO NOTES START -->
+    <div class="row mb-2" style="display:none;">
+      <h1>Main Header</h1>
+      <h3>Subheader</h3>
+    </div>
+    <!-- INTRO NOTES END -->
+
+
+    <!-- DETAILS START -->
+    <div class="container mt-4" id="printer_ident">
+
+      <div class="container mt-4" id="lower_toolbar">
+        <hr>
+
+        <div class="row mb-2">
+
+          <div class="col-md-4" disabled>
+            <div class="form-floating float-start">
+              <button id="btn-1" type="button" class="btn btn-secondary">Button 1</button>
+            </div>
+          </div>
+
+          <div class="col-md-4" disabled>
+            <div class="form-floating float-start">
+              <button id="btn-2" type="button" class="btn btn-secondary">Button 2</button>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="form-floating float-end">
+              <button id="btn-3" type="button" class="btn btn-danger">Button 3</button>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="form-floating float-end">
+              <button id="btn-4" type="button" class="btn btn-primary">Button 4</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- DETAILS END -->
+
+  </form>
+  <!-- FORM END -->
+
+  <!-- FOOTER (copyright and standard JS includes) -->
+  {% include "common/footer" %}
+
+  <!-- PAGE-SPECIFIC JAVASCRIPT INCLUDES -->
+  <!-- <script src="/www/static/page/page_lib.js"></script> -->
+
+</body>
+
+</html>

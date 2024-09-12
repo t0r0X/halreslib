@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <title>Berlin Rust Hack&Learn Web Ressources</title>
+  <script type="module" src="/www/static/start/start.js"></script>
+  <!-- All stylesheet related stuff and common header elements are loaded from sub-template "header" -->
+  {% include "common/header" %}
+</head>
+
+<body>
+
+  <!-- The navbar is loaded from sub-template "navbar" (the active item is set later by the page-js) -->
+  {% include "common/navbar" %}
+
+  <!-- PAGE TITLE START -->
+  <div class="container mt-3 mb-3">
+    <img id="lead_img" class="rounden float-start" height="100px" src="/www/static/common/browsing_ferris.png" />
+    <div class="fs-2 mb-1 text-center"><b>Summer of Rust Web Frameworks</b><br>Rocket Version</div>
+  </div>
+  <!-- PAGE TITLE END -->
+
+  <!-- QUERY ELEMENT START -->
+  <div id="tool-bar" class="container">
+    <hr>
+    <div id="url_table"></div>
+    <script>
+      var tabledata = {{ urls | safe }};
+    </script>
+  
+  </div>
+  <!-- QUERY ELEMENT  END -->
+
+
+  <!-- FORM START -->
+  <form id="form_printer" class="form-floating mb-1 needs-validated" autocomplete="off" novalidate>
+
+    <!-- INTRO NOTES START -->
+    <div class="row mb-2" style="display:none;">
+      <h1>Main Header</h1>
+      <h3>Subheader</h3>
+    </div>
+    <!-- INTRO NOTES END -->
+
+  </form>
+  <!-- FORM END -->
+
+  <!-- FOOTER (copyright and standard JS includes) -->
+  {% include "common/footer" %}
+
+  <!-- PAGE-SPECIFIC JAVASCRIPT INCLUDES -->
+  <!-- <script src="/www/static/page/page_lib.js"></script> -->
+
+</body>
+
+</html>

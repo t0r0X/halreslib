@@ -1,0 +1,14 @@
+  <meta charset="utf-8">
+  <meta name="viewport"    content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/www/static/common/favicon.ico">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/www/static/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="/www/static/bootstrap/css/fontawesome.min.css">
+  <!-- AutoComplete -->
+  <link rel="stylesheet" href="/www/static/autoComplete/css/autoComplete.02.css">
+  <!-- Tabulator -->
+  <link rel="stylesheet" href="/www/static/tabulator/css/tabulator_simple.min.css">

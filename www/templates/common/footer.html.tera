@@ -1,0 +1,7 @@
+<hr><p class="small mb-5 text-muted text-center">&copy; Rust Hack&Learn Meetup Berlin, 2024, Version 20240912.001</p>
+
+<script>var login_user = "{{ user_uuid | safe }}";</script>
+<script type="text/javascript" src="/www/static/tabulator/js/tabulator.js"></script>
+<script type="text/javascript" src="/www/static/autoComplete/autoComplete.min.js"></script>
+<script type="text/javascript" src="/www/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- <script type="text/javascript" src="/www/static/common/common_lib.js"></script> -->

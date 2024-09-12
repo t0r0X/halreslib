@@ -1,0 +1,34 @@
+[package]
+name    = "halreslib"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+anyhow       = "1.0.86"
+blake3       = "1.5.4"
+chrono       = "0.4.38"
+env_logger   = "0.11.5"
+log          = "0.4.22"
+reqwest      = { version = "0.12", features = ["blocking", "json"] }
+rocket       = "0.5.1"
+select       = "0.6.0"
+serde        = "1.0"
+serde_derive = "1.0"
+serde_json   = "1.0"
+tokio        = { version = "1", features = ["macros", "io-util", "sync", "time", "net", "rt-multi-thread"] }
+uuid         = { version = "1", features = ["serde", "v4"] }
+
+
+[dependencies.sqlx]
+version  = "0.7"
+default-features = false
+features = ["macros", "migrate", "runtime-tokio-native-tls"]
+
+[dependencies.rocket_dyn_templates]
+version  = "0.2.0"
+features = ["tera"]
+
+[dependencies.rocket_db_pools]
+version  = "0.2.0"
+features = ["sqlx_sqlite"]
