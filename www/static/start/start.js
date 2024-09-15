@@ -45,7 +45,7 @@ function createTableUrlList() {
     });
 
     // behaviour when the row is clicked
-    table.on("rowClick", async function (e, row) {
+    table.on("rowClick", async function (e) {
         console.log("received row click event - doing nothing with it");
     });
 }
